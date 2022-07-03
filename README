@@ -14,7 +14,7 @@ BACKEND:
 - C
 - JSON-C
 - libcurl
-- (Pico)[https://github.com/foxweb/pico]
+- [Pico](https://github.com/foxweb/pico)
 
 There has been a lot to the development process. I started development on it roughly 4-5 days or so before father's day of 2022 (as it was initially intended to be a gift to my father).
 
