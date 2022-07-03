@@ -1,9 +1,7 @@
 CC = gcc
-CFLAGS = -std=c99 -O3 -g -Wall
-# EXTRA CFLAGS
-#CFLAGS += -Wextra
+CFLAGS = -std=c99 -O3 -g -Wall -Wextra
 CFLAGS += -lcurl -ljson-c
-LDFLAGS :=
+LDFLAGS =
 
 SRC_DIR := src
 BIN_DIR := bin
@@ -22,7 +20,7 @@ dirs:
 	mkdir -p $(BIN_DIR)
 
 $(TARGET): $(OBJECTS)
-	$(CC) $< $(CFLAGS) -o $@
+	$(CC) $(CFLAGS) -o $@ $(OBJECTS)
 
 $(OBJECTS): $(SOURCES)
 	$(CC) $(CFLAGS) -c $< -o $@
