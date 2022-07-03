@@ -53,9 +53,9 @@ int http_get(char* endpoint) {
 	// LibCurl Configuration
 	curl_easy_setopt(curl, CURLOPT_URL, endpoint);
 	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, output_data);
-    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &data_recieved);
-    CURLcode result = curl_easy_perform(curl);
-    curl_easy_cleanup(curl);
+	curl_easy_setopt(curl, CURLOPT_WRITEDATA, &data_recieved);
+	CURLcode result = curl_easy_perform(curl);
+	curl_easy_cleanup(curl);
 
 	// Action
 	if (result != CURLE_OK) {
