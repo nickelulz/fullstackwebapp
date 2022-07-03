@@ -12,8 +12,8 @@ char* ansi_wrapf(const char* code, const char* format, va_list args) {
     int format_status = vsprintf(format_buf, format, args);
 
     if (format_status != EXIT_SUCCESS) {
-        // LOG_ERROR("Format failure!");
-        // LOG_ERROR("Attempt to format string \"%s\" failed on exit code %d!", format, format_status);
+        LOG_ERROR("Format failure!");
+        LOG_ERROR("Attempt to format string \"%s\" failed on exit code %d!", format, format_status);
         return NULL;
     }
 

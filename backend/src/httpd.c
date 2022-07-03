@@ -16,8 +16,8 @@
 #include "logger.h"
 
 #define MAX_CONNECTIONS 1000
-#define BUF_SIZE 65535
-#define QUEUE_SIZE 1000000
+#define BUF_SIZE        65535
+#define QUEUE_SIZE      1000000
 
 static int listenfd;
 int* clients;
